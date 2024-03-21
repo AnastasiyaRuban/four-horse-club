@@ -1,0 +1,229 @@
+:root {
+    --dark-color: #313131;
+    --black-color: #1F1F1F;
+    --white-color: #FFFFFF;
+    --red-color: #F54932;
+    --blue-color: #3057A2;
+    --peach-color: #E9DED4;
+    --yellow-color: #FBCE51;
+    --gray-color: #D6D6D6;
+    /* / */
+    --font-family: "Golos Text", sans-serif;
+    --second-family: "Merriweather", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+    /* / */
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather'),
+        url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+        url('../fonts/Merriweather-Regular.woff') format('woff'),
+        url('../fonts/Merriweather-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Merriweather'),
+        url('../fonts/Merriweather-Bold.woff2') format('woff2'),
+        url('../fonts/Merriweather-Bold.woff') format('woff'),
+        url('../fonts/Merriweather-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather'),
+        url('../fonts/golos-text_regular.woff2') format('woff2'),
+        url('../fonts/golos-text_regular.woff') format('woff'),
+        url('../fonts/golos-text_regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Merriweather'),
+        url('../fonts/golos-text_medium.woff2') format('woff2'),
+        url('../fonts/golos-text_medium.woff') format('woff'),
+        url('../fonts/golos-text_medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Merriweather'),
+        url('../fonts/golos-text_demibold.woff2') format('woff2'),
+        url('../fonts/golos-text_demibold.woff') format('woff'),
+        url('../fonts/golos-text_demibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Golos Text';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Golos Text'),
+        url('../fonts/golos-text_bold.woff2') format('woff2'),
+        url('../fonts/golos-text_bold.woff') format('woff'),
+        url('../fonts/golos-text_bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--dark-color);
+
+}
+
+/* GLOBAL */
+.container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 72px;
+}
+
+/* .btn-reset {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+} */
+
+.title,
+.descr {
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+.header {
+    padding: 26px 0;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    /* #e9ded4; */
+}
+
+.hero:before {
+    position: absolute;
+    content: '';
+    height: calc(100% + 39px);
+    width: 100%;
+    top: -91px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('../img/hero-back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    
+}
+
+.hero__container {
+    max-width: 542px;
+    padding-top: 36px;
+    padding-bottom: 132px;
+}
+
+.hero__title {
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+.hero__title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.hero__title-center {
+    text-align: center;
+}
+
+.hero__text {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.3;
+} 
+
+.hero__nav {
+    display: flex;
+    column-gap: 16px;
+}
+
+.hero__link {
+    display: inline-block;
+    max-width: 263px;
+    min-height: 72px;
+    padding: 20px 49px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.3;
+    font-size: 16px;
+    border: 2px solid var(--black-color);
+    border-radius: 66px;
+}
+
+.hero__link-support {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.hero__scroll-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    background-color: var(--red-color);
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
