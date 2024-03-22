@@ -140,6 +140,13 @@ body {
     text-transform: uppercase;
 }
 
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
 /* HEADER */
 .header {
     padding: 26px 0;
@@ -154,7 +161,7 @@ body {
 .hero:before {
     position: absolute;
     content: '';
-    height: calc(100% + 39px);
+    height: calc(100% + 37px);
     width: 100%;
     top: -91px;
     bottom: 0;
@@ -164,12 +171,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    
+
 }
 
 .hero__container {
     max-width: 542px;
-    padding-top: 36px;
+    padding-top: 33px;
     padding-bottom: 132px;
 }
 
@@ -189,11 +196,11 @@ body {
 }
 
 .hero__text {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
     text-align: center;
     font-size: 18px;
     line-height: 1.3;
-} 
+}
 
 .hero__nav {
     display: flex;
@@ -204,7 +211,7 @@ body {
     display: inline-block;
     max-width: 263px;
     min-height: 72px;
-    padding: 20px 49px;
+    padding: 13px 49px;
     text-align: center;
     font-weight: 500;
     line-height: 1.3;
@@ -222,8 +229,149 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 58px;
     width: 100%;
     background-color: var(--red-color);
     box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+/* SUPPORT */
+.support {
+    padding: 80px 0;
+}
+
+.support__text {
+    font-family: var(--second-family);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.support__text-color {
+    font-weight: 700;
+    color: var(--red-color);
+}
+
+.support__first-stage {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    margin-bottom: 65px;
+    background-image: url('../img/game.png');
+    background-position: right center;
+    background-size: 32% auto;
+    background-repeat: no-repeat;
+}
+
+.support__first-stage .support__text {
+    width: 63%;
+}
+
+.support__second-stage {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.support__wrapper {
+    width: 58%;
+}
+
+.support__second-stage::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 50%;
+    left: -40px;
+    background-image: url('../img/game-of-chess.png');
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.support__second-stage .support__text {
+    margin-bottom: 60px;
+}
+
+.support__program {
+    margin-bottom: 48px;
+}
+
+.support__list-item {
+    display: flex;
+}
+
+.support__list-item:not(:last-child) {
+    border-bottom: 2px solid #D0D0D0;
+    padding-bottom: 16px;
+}
+
+.support__list-item:not(:first-child) {
+    padding-top: 16px;
+}
+
+.support__list-title,
+.support__list-info,
+.support__questions-info {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.support__list-title {
+    display: inline-block;
+    width: 43%;
+    padding-right: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.support__list-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    font-weight: 600;
+}
+
+.support__list-oldInfo {
+    position: relative;
+}
+
+.support__list-oldInfo:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-color);
+    border-radius: 2px;
+    top: 50%;
+    left: -1px;
+}
+
+.support__list-info::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: calc(100% + 32px);
+    top: -16px;
+    left: 0;
+    background-color: #D0D0D0;
+}
+
+.support__list-item:last-child .support__list-info:before,
+.support__list-item:first-child .support__list-info:before {
+    height: calc(100% + 16px);
+}
+
+
+.support__list-item:first-child .support__list-info:before {
+    top: 0;
+}
+
+.support__questions-info {
+    font-weight: 400;
+    color: #3057a2;
 }
