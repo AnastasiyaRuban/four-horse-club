@@ -195,6 +195,10 @@ body {
     text-align: center;
 }
 
+.hero__title-right {
+    text-align: right;
+}
+
 .hero__text {
     margin-bottom: 39px;
     text-align: center;
@@ -238,7 +242,9 @@ body {
 
 /* SUPPORT */
 .support {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
 }
 
 .support__text {
@@ -252,6 +258,7 @@ body {
 .support__text-color {
     font-weight: 700;
     color: var(--red-color);
+    letter-spacing: -0.04rem;
 }
 
 .support__first-stage {
@@ -277,14 +284,16 @@ body {
 
 .support__wrapper {
     width: 58%;
+    max-width: 704px;
 }
 
 .support__second-stage::before {
     position: absolute;
     content: '';
-    height: 100%;
-    width: 50%;
-    left: -40px;
+    height: 104%;
+    width: 43%;
+    left: -29px;
+    top: -29px;
     background-image: url('../img/game-of-chess.png');
     background-position: left center;
     background-size: contain;
@@ -306,11 +315,11 @@ body {
 
 .support__list-item:not(:last-child) {
     border-bottom: 2px solid #D0D0D0;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
 }
 
 .support__list-item:not(:first-child) {
-    padding-top: 16px;
+    padding-top: 15px;
 }
 
 .support__list-title,
@@ -322,7 +331,8 @@ body {
 
 .support__list-title {
     display: inline-block;
-    width: 43%;
+    width: 44%;
+    max-width: 305px;
     padding-right: 16px;
     font-weight: 400;
     opacity: 0.7;
@@ -338,6 +348,7 @@ body {
 
 .support__list-oldInfo {
     position: relative;
+    margin-right: 13px
 }
 
 .support__list-oldInfo:before {
@@ -374,4 +385,122 @@ body {
 .support__questions-info {
     font-weight: 400;
     color: #3057a2;
+}
+
+/* STAGE */
+
+.stage {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.stage__title {
+    position: relative;
+    margin-bottom: 54px;
+    max-width: 806px;
+    font-size: 54px;
+    line-height: 1.2;
+}
+
+.stage__title-small {
+    position: absolute;
+    left: 37%;
+    bottom: 10px;
+    max-width: 280px;
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--blue-color);
+    text-transform: none;
+}
+
+.stage__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas:
+        'one two three'
+        'four five three'
+        'six seven seven';
+    counter-reset: count;
+}
+
+.stage__list::after {
+    position: absolute;
+    content: counter(count, decimal);
+    right: -61px;
+    bottom: -4px;
+    width: 33%;
+    height: 236px;
+    background-image: url('../img/airplane.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.stage__item {
+    position: relative;
+    display: flex;
+    column-gap: 16px;
+    padding: 20px 21px 20px 72px;
+    font-size: 20px;
+    line-height: 1.2;
+    background-image: url('../img/stage-back.png');
+    background-color: var(--peach-color);
+    background-blend-mode: color-burn;
+    counter-increment: count 1;
+}
+
+.stage__item::before {
+    position: absolute;
+    content: counter(count, decimal);
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: var(--white-color);
+    font-weight: 600;
+}
+
+.stage__item--one {
+    grid-area: one;
+}
+
+.stage__item--two {
+    grid-area: two;
+}
+
+.stage__item--three {
+    grid-area: three;
+}
+
+.stage__item--four {
+    grid-area: four;
+}
+
+.stage__item--five {
+    grid-area: five;
+}
+
+.stage__item--six {
+    grid-area: six;
+}
+
+.stage__item--seven {
+    grid-area: seven;
+}
+
+.stage__item--seven .stage__description {
+    width: 58%;
+}
+
+.stage__description {
+    font-weight: 500;
 }
