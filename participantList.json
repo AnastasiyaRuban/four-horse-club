@@ -1,0 +1,35 @@
+{
+    "listDb": [
+
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Хозе-Рауль Капабланка",
+            "status": "Чемпион мира по шахматам"
+        },
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Эммануил Ласкер",
+            "status": "Чемпион мира по шахматам"
+        },
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Александр Алехин",
+            "status": "Чемпион мира по шахматам"
+        },
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Арон Нимцович",
+            "status": "Чемпион мира по шахматам"
+        },
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Рихард Рети",
+            "status": "Чемпион мира по шахматам"
+        },
+        {
+            "avatarUrl": "/img/participant-avatar.png",
+            "name": "Остап Бендер",
+            "status": "Чемпион мира по шахматам"
+        }
+    ]
+}

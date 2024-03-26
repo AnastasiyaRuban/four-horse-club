@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <script defer src="js/script.js"></script>
+    <script type="module" defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+        <!-- <section class="hero">
             <div class="container">
                 <div class="hero__container">
                     <h2 class="hero__title title">
@@ -111,9 +111,37 @@
                 </li>
             </ul>
         </div>
+    </section> -->
+    <section class="participants">
+        <div class="container">
+            <h2 class="participants__title title">
+                Участники турнира
+            </h2>
+            <div class="participants__swiper swiper">
+                <div class="swiper__buttons">
+                    <button class="swiper__button swiper__button--prev btn">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
+                            <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white" stroke-width="2" stroke-linecap="square" />
+                        </svg>
+                    </button>
+                    <span class="swiper__counter"></span>
+                    <button class="swiper__button swiper__button--next btn">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="22" fill="#313131" />
+                            <path d="M19.4618 13.5385L27.9233 22L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="swiper__wrapper">
+                    <ul class="participants__list list"></ul>
+                </div>
+            </div>
+        </div>
     </section>
     </main>
-    <footer></footer>
+    <footer>
+    </footer>
 </body>
 
 </html>
